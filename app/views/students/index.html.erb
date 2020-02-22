@@ -1,5 +1,7 @@
+
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <% student.active ? status = "active" : status = "inactive"%>
+    <div><h3><%= link_to student.to_s, student_path(student) %> - <em><%= status%></em></h3></div>
   <% end %>
 </div>

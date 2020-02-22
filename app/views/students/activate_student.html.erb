@@ -1,0 +1,4 @@
+<% student.active ? status = "active" : status = "inactive"%>
+<h4>Activate</h4>
+<h4><%= @student.to_s %> is now <%= status%></h4>
+<div><%= link_to 'Index', students_path %></div>
